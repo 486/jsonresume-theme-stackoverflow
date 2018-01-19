@@ -1,0 +1,28 @@
+{{#if resume.reading.length}}
+<section class="section">
+  <header>
+    <h2 class='section-title'>Reading List</h2>
+  </header>
+  <section id="reading_list">
+    {{#each resume.reading}}
+    <div class="item">
+      {{#if title}}
+      <span class="reference" {{#if url}}style="margin-bottom:0"{{/if}}>
+        &#8220;&#32;{{title}}&#32;&#8221;
+      </span>
+      {{/if}}
+      {{#if url}}
+      <span class="website" style="margin-bottom:1em;display:block">
+        <a target="_blank" href="{{url}}">{{#if urlName}}{{urlName}}{{/if}}</a>
+      </span>
+      {{/if}}
+      {{#if authors}}
+      <span class="name">
+        {{authors}}
+      </span>
+      {{/if}}
+    </div>
+    {{/each}}
+  </section>
+</section>
+{{/if}}

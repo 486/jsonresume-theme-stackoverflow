@@ -7,9 +7,14 @@
     {{#each resume.references}}
     <div class="item">
       {{#if reference}}
-      <blockquote class="reference">
+      <blockquote class="reference" {{#if url}}style="margin-bottom:0"{{/if}}>
         &#8220;&#32;{{reference}}&#32;&#8221;
       </blockquote>
+      {{/if}}
+      {{#if url}}
+      <span class="website" style="margin-bottom:1em;display:block">
+        <a target="_blank" href="{{url}}">{{#if urlName}}{{urlName}}{{/if}}</a>
+      </span>
       {{/if}}
       {{#if name}}
       <div class="name">
