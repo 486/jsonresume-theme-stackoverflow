@@ -735,6 +735,9 @@ ul.courses li:hover {
     #skills .keywords::before {
         content: '';
     }
+    #interests .keywords::before {
+        content: '';
+    }
     .section p {
         margin: 0;
         padding: 0;
